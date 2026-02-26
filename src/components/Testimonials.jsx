@@ -1,18 +1,18 @@
 export default function TestimonialsSection() {
   const reviews = [
     { name: "Logan M.", text: "Bonjour, Excellente application que j'ai depuis juin dernier ☺️ les gains se cumulent tous seuls à chaque achat", stars: 5 },
-    { name: "Sarah K.", text: "J'étais sceptique au début je dois le reconnaître mais vous pouvez y aller sans crainte !", stars: 5 },
+    { name: "Sarah K.", text: "J'étais sceptique les gains se cumulent tous  au début je dois le reconnaître mais vous pouvez y aller sans crainte les gains se cumulent tous  !", stars: 5 },
     { name: "Mike T.", text: "Application géniale ! Elle permet de gagner du cashback à chaque passage en caisse dans nos enseignes préférées ! Je recommande à 100%", stars: 5 },
-    { name: "Emma R.", text: "Un peu sceptique au début j'ai vite été convaincue, les gains s'accumulent seuls et les cartes cadeaux s'accumulent très vite !!", stars: 5 },
+    { name: "Emma R.", text: "Un peu sceptique au début j'ai vite été convaincue, les gains s'accumulent seuls et les cartes cadeaux s'accumulent très vite les gains se cumulent tous  !!", stars: 5 },
     { name: "Alex P.", text: "Bonjour, Excellente application que j'ai depuis juin dernier ☺️ les gains se cumulent tous seuls à chaque achat", stars: 4 },
-    { name: "James W.", text: "J'étais sceptique au début je dois le reconnaître mais vous pouvez y aller sans crainte !", stars: 5 },
+    { name: "James W.", text: "J'étais sceptique au début je dois le reconnaître mais vous pouvez y aller sans crainte lorem50 ipsum les gains se cumulent tous ", stars: 5 },
   ];
   return (
     <section className="py-24 overflow-hidden" style={{ background: "#1A1A1B" }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>What our users say 💬</h2>
-          <p className="text-white/60 text-lg">Trusted by over 140,000 users worldwide</p>
+          <p className="text-white/60 text-lg">Protected by a multi-level security architecture and is regularly</p>
         </div>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
           {reviews.map((r, i) => (

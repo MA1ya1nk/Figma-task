@@ -1,36 +1,179 @@
 export default function InvestSection() {
   return (
-    <section className="py-24 overflow-hidden" style={{ background: "linear-gradient(226.73deg, #C196C8 1.98%, #4F618D 97.5%)" }}>
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>Invest in Crypto,<br/>Starting with Just $1</h2>
-          <p className="text-white/80 text-lg mb-8">Buy BTC, ETH, Matic, & 100,000+ crypto Assets across Multiple Chains with Ease</p>
-          <div className="flex flex-wrap gap-3">
-            <button className="flex items-center gap-3 px-5 py-3 bg-black rounded-xl hover:bg-black/80 transition-all">
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              <span className="text-white text-sm font-medium">App Store</span>
-            </button>
-            <button className="flex items-center gap-3 px-5 py-3 bg-black rounded-xl hover:bg-black/80 transition-all">
-              <span className="text-white text-sm font-medium">Play Store</span>
-            </button>
+    <>
+      <style>{`
+        .invest-section {
+          background: linear-gradient(226.73deg, #C196C8 1.98%, #4F618D 97.5%);
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .invest-inner {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 80px 60px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          gap: 40px;
+          min-height: 420px;
+        }
+
+        .invest-text {}
+
+        .invest-title {
+          font-family: 'Georgia', serif;
+          font-weight: 700;
+          font-size: clamp(28px, 3.5vw, 48px);
+          line-height: 1.2;
+          color: #ffffff;
+          margin: 0 0 16px 0;
+          letter-spacing: -0.5px;
+        }
+
+        .invest-desc {
+          font-size: 16px;
+          line-height: 1.6;
+          color: rgba(255,255,255,0.85);
+          margin: 0 0 32px 0;
+          max-width: 400px;
+        }
+
+        .store-buttons {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .store-btn {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #000000;
+          border: none;
+          border-radius: 10px;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background 0.2s;
+          text-decoration: none;
+        }
+        .store-btn:hover { background: #1a1a1a; }
+
+        .store-btn-icon { font-size: 22px; color: white; }
+
+        .store-btn-text { text-align: left; }
+        .store-btn-small {
+          display: block;
+          font-size: 10px;
+          color: rgba(255,255,255,0.6);
+          font-family: 'Inter', sans-serif;
+          line-height: 1;
+          margin-bottom: 2px;
+        }
+        .store-btn-large {
+          display: block;
+          font-size: 14px;
+          color: #ffffff;
+          font-family: 'Inter', sans-serif;
+          font-weight: 600;
+          line-height: 1;
+        }
+
+        /* Image side */
+        .invest-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .invest-image-placeholder {
+          width: 460px;
+          max-width: 100%;
+          height: 360px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.08);
+          border: 1px dashed rgba(255,255,255,0.2);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          color: rgba(255,255,255,0.4);
+          font-size: 13px;
+          font-family: 'Inter', sans-serif;
+        }
+
+        .invest-image-placeholder .placeholder-icon {
+          font-size: 52px;
+        }
+
+        /* When using real image */
+        .invest-real-img {
+          width: 480px;
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+          filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+          transform: translateY(-10px);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+          .invest-inner {
+            grid-template-columns: 1fr;
+            padding: 60px 32px;
+            text-align: center;
+          }
+          .invest-desc { max-width: 100%; }
+          .store-buttons { justify-content: center; }
+          .invest-image { margin-top: 20px; }
+          .invest-image-placeholder { width: 100%; height: 280px; }
+        }
+
+        @media (max-width: 480px) {
+          .invest-inner { padding: 48px 20px; }
+          .invest-title { font-size: 26px; }
+          .store-buttons { flex-direction: column; align-items: center; }
+          .store-btn { width: 180px; justify-content: center; }
+        }
+      `}</style>
+
+      <section className="invest-section">
+        <div className="invest-inner">
+
+          {/* LEFT — Text */}
+          <div className="invest-text">
+            <h2 className="invest-title">
+              Invest in Crypto,<br />
+              Starting with Just $1
+            </h2>
+            <p className="invest-desc">
+              Buy BTC, ETH, Matic, &amp; 100,000+ crypto Assets across Multiple Chains with Ease
+            </p>
+            <div className="store-buttons">
+              <a className="store-btn">
+                <span className="store-btn-icon">🍎</span>
+                <span className="store-btn-text">
+                  <span className="store-btn-small">Download on the</span>
+                  <span className="store-btn-large">App Store</span>
+                </span>
+              </a>
+              <a className="store-btn">
+                <span className="store-btn-icon">▶</span>
+                <span className="store-btn-text">
+                  <span className="store-btn-small">Download on the</span>
+                  <span className="store-btn-large">Play Store</span>
+                </span>
+              </a>
+            </div>
           </div>
+
+          
+
         </div>
-        <div className="flex items-center justify-center">
-          <div className="relative w-80 h-80">
-            <div className="absolute inset-0 rounded-full opacity-30" style={{ background: "radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%)" }} />
-            {["₿", "Ξ", "◈", "◎", "Ⓜ", "◉"].map((sym, i) => {
-              const angle = (i * 60 * Math.PI) / 180;
-              const r = 110;
-              const x = 50 + (r * Math.cos(angle)) / 1.6;
-              const y = 50 + (r * Math.sin(angle)) / 1.6;
-              return (
-                <div key={i} className="absolute w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl font-bold border border-white/30" style={{ left: `${x}%`, top: `${y}%`, transform: "translate(-50%, -50%)", background: `hsl(${i * 60}, 50%, 25%)`, boxShadow: `0 0 20px hsla(${i * 60}, 60%, 50%, 0.3)` }}>{sym}</div>
-              );
-            })}
-            <div className="absolute inset-1/4 rounded-full flex items-center justify-center text-white text-4xl font-black" style={{ background: "linear-gradient(135deg, #AFE2ED, #A26AFF)" }}>P</div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,25 +1,90 @@
+import React from 'react';
+import swapImage from '../assets/bitcoin-to-dollar.png';
+import miniImage from '../assets/mining-cart 1.png';
+import marketImage from '../assets/market-rally 1.png';
+import secondImage from '../assets/Group 48095522.png';
+
 export default function DeFiFeatures() {
-  const features = [
-    { title: "Swap Crypto with ease", desc: "Swap smarter, not harder with Plena Finance — fast, safe, and competitive crypto swaps.", icon: "⇄", cols: "md:col-span-1 md:row-span-2" },
-    { title: "Lending Protocol", desc: "Earn Interest with Top Protocols in the Industry with Just a Tap!", icon: "📈" },
-    { title: "Stake your assets", desc: "Earn Interest with Top Protocols in the Industry with Just a Tap!", icon: "🏹" },
-    { title: "Liquidity Pools", desc: "Enjoy the best exchange rates across all decentralized exchanges in one place!", icon: "💧", cols: "md:col-span-2" },
-  ];
+  // EDIT YOUR IMAGE LINKS HERE
+  const imageMap = {
+    swap: "https://your-image-link.com/swap-3d.png",
+    lending: "https://your-image-link.com/shield-3d.png",
+    stake: "https://your-image-link.com/chart-3d.png",
+    liquidity: "https://your-image-link.com/cart-3d.png",
+  };
+
   return (
-    <section className="bg-black py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>Features Like Never<br />Seen Before</h2>
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-12 text-sm font-medium" style={{ background: "rgba(162,106,255,0.2)", color: "#A26AFF", border: "1px solid rgba(162,106,255,0.3)" }}>
-          🔓 Non-custodial · EIP-4337 · Multi-chain
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {features.map((f) => (
-            <div key={f.title} className={`p-8 rounded-3xl border border-white/10 flex flex-col justify-end ${f.cols || ""}`} style={{ background: "rgba(32,32,32,0.6)", backdropFilter: "blur(37px)", minHeight: "200px" }}>
-              <div className="text-4xl mb-4">{f.icon}</div>
-              <h3 className="text-2xl font-bold text-white mb-2">{f.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">{f.desc}</p>
+    <section className="bg-black py-20 px-6 min-h-screen flex items-center relative overflow-hidden">
+      
+      {/* Background Glows (Exact Figma style) */}
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-[120px] rounded-full -translate-y-1/2" />
+      
+      <div className="max-w-6xl mx-auto w-full relative z-10">
+        {/* Heading */}
+        <h2 className="text-white text-5xl md:text-6xl font-bold mb-16 leading-[1.1] tracking-tight">
+          Features Like Never <br /> Seen Before
+        </h2>
+
+        {/* The Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          {/* 1. Swap Crypto - Tall Card */}
+          <div className="md:row-span-2 bg-[#0F0F11] rounded-[40px] p-10 flex flex-col justify-between border border-white/5 min-h-[620px]">
+            <div className="flex justify-center items-center h-full">
+               <img 
+                src={swapImage}
+                alt="Swap" 
+                className="w-4/5 object-contain" 
+                onError={(e) => e.target.style.display='none'} // Hides if link is broken
+               />
             </div>
-          ))}
+            <div>
+              <h3 className="text-white text-3xl font-bold mb-4 leading-tight">Swap Crypto <br /> with ease</h3>
+              <p className="text-gray-400 text-base leading-relaxed max-w-[280px]">
+                Swap smarter, not harder with Plena Finance - fast, safe, and competitive crypto swaps.
+              </p>
+            </div>
+          </div>
+
+          {/* 2. Lending Protocol - Small Card */}
+          <div className="bg-[#0F0F11] rounded-[40px] p-8 border border-white/5 flex flex-col items-start gap-4">
+            <div className="h-20 w-20 flex items-center">
+                <img src={secondImage} alt="Lending" className="h-full object-contain" />
+            </div>
+            <div>
+              <h3 className="text-white text-2xl font-bold mb-2">Lending Protocol</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Earn interest with Top Protocols in the Industry with Just a Tap!
+              </p>
+            </div>
+          </div>
+
+          {/* 3. Stake your assets - Small Card */}
+          <div className="bg-[#0F0F11] rounded-[40px] p-8 border border-white/5 flex flex-col items-start gap-4">
+            <div className="h-20 w-20 flex items-center">
+                <img src={marketImage} alt="Stake" className="h-full object-contain" />
+            </div>
+            <div>
+              <h3 className="text-white text-2xl font-bold mb-2">Stake your assets</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Earn interest with Top Protocols in the Industry with Just a Tap!
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Liquidity Pools - Wide Card */}
+          <div className="md:col-span-2 bg-[#0F0F11] rounded-[40px] p-10 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-xs">
+              <h3 className="text-white text-2xl font-bold mb-2">Liquidity Pools</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Enjoy the best exchange rates across all decentralized exchanges in one place!
+              </p>
+            </div>
+            <div className="h-32 w-48 flex justify-end items-center">
+                <img src={miniImage} alt="Liquidity" className="h-full object-contain" />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
