@@ -140,7 +140,7 @@ export default function FeaturesSection() {
             </div>
 
             <div className="feature-image">
-              <img src="public/assets/feature/security-shield.png" alt="control assets" />
+              <img src="/assets/feature/security-shield.png" alt="control assets" />
             </div>
           </div>
 
@@ -157,7 +157,7 @@ export default function FeaturesSection() {
             </div>
 
             <div className="feature-image">
-              <img src="public/assets/feature/social.png" alt="social login" />
+              <img src="/assets/feature/social.png" alt="social login" />
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export default function FeaturesSection() {
             </div>
 
             <div className="feature-image">
-              <img src="public/assets/feature/crypto-coins.png" alt="tokens" />
+              <img src="/assets/feature/crypto-coins.png" alt="tokens" />
             </div>
           </div>
 

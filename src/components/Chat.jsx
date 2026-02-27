@@ -89,14 +89,14 @@ export default function ChatPaySection() {
 
           {/* Main image — checkerboard with coins */}
           <img
-            src="public/assets/chat/chess.png"
+            src="/assets/chat/chess.png"
             alt="Chat Pay"
             className="w-full max-w-[380px] drop-shadow-xl rounded-2xl z-0"
           />
 
           {/* Left coin — overlapping left edge */}
           <img
-            src="public/assets/chat/small.png"
+            src="/assets/chat/small.png"
             alt="Coin"
             className="absolute drop-shadow-2xl z-10"
             style={{

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const PlenaLogo = () => (
   <div className="flex items-center gap-3">
     {/* Scaled icon to match the 20px text height proportion */}
-    <img src="public/assets/main.png" className="h-7 w-auto" alt="Plena icon" />
+    <img src="/assets/main.png" className="h-7 w-auto" alt="Plena icon" />
 
     <div className="flex flex-col leading-[1.1]">
       <span className="text-white font-bold text-2xl tracking-tight">plena</span>

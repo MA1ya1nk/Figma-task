@@ -367,14 +367,14 @@ export default function InvestSection() {
 
             {/* Wallet */}
             <img
-              src="public/assets/invest/first.png"
+              src="/assets/invest/first.png"
               alt="wallet"
               className="wallet-img"
             />
 
             {/* Buy Button */}
             <img
-              src="public/assets/invest/buy.png"
+              src="/assets/invest/buy.png"
               alt="buy"
               className="buy-img"
             />
