@@ -4,12 +4,12 @@ export default function TeamSection() {
   const scrollRef = useRef(null);
 
   const team = [
-    { name: "Jared E. Wallace", role: "CEO & Co-Founder", img: "src/assets/team-img-1.png", color: "bg-blue-500/20" },
-    { name: "Jessica Johnson", role: "Co-Founder", img: "src/assets/team-img-2.png", color: "bg-purple-500/20" },
-    { name: "Trevor Noah", role: "Tech Lead", img: "src/assets/team-img-3.png", color: "bg-blue-600/20" },
-    { name: "Kate Winslet", role: "Marketing Lead", img: "src/assets/team-img-4.png", color: "bg-purple-600/20" },
-    { name: "Marcus Wright", role: "Design Lead", img: "src/assets/team-img-4.png", color: "bg-blue-500/20" },
-    { name: "Sarah Chen", role: "Operations", img: "src/assets/team-img-4.png", color: "bg-purple-600/20" },
+    { name: "Jared E. Wallace", role: "CEO & Co-Founder", img: "public/assets/team-img-1.png", color: "bg-blue-500/20" },
+    { name: "Jessica Johnson", role: "Co-Founder", img: "public/assets/team-img-2.png", color: "bg-purple-500/20" },
+    { name: "Trevor Noah", role: "Tech Lead", img: "public/assets/team-img-3.png", color: "bg-blue-600/20" },
+    { name: "Kate Winslet", role: "Marketing Lead", img: "public/assets/team-img-4.png", color: "bg-purple-600/20" },
+    { name: "Marcus Wright", role: "Design Lead", img: "public/assets/team-img-4.png", color: "bg-blue-500/20" },
+    { name: "Sarah Chen", role: "Operations", img: "public/assets/team-img-4.png", color: "bg-purple-600/20" },
   ];
 
   const scroll = (direction) => {
