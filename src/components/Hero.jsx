@@ -57,13 +57,13 @@ export default function Hero() {
             <img
               src="/assets/phone/right.png"
               alt="Plena App Interface"
-              className="absolute w-[450px] md:w-[650px] z-10 translate-x-20 translate-y-10 rotate-[12deg] opacity-90 transition-transform hover:scale-105 duration-700"
+              className="absolute w-[450px] md:w-[650px] z-10 translate-x-20 translate-y-10 rotate-[2deg] opacity-90 transition-transform hover:scale-105 duration-700"
             />
             {/* Primary Phone (Front) - Scaled to w-[550px] */}
             <img
               src="/assets/phone/left.png"
               alt="Plena App Main"
-              className="absolute w-[450px] md:w-[650px] z-20 -translate-x-24 -rotate-[6deg] drop-shadow-[0_50px_50px_rgba(0,0,0,0.8)] transition-transform hover:scale-105 duration-700"
+              className="absolute w-[450px] md:w-[650px] z-20 -translate-x-24 -rotate-[4deg] drop-shadow-[0_50px_50px_rgba(0,0,0,0.8)] transition-transform hover:scale-105 duration-700"
             />
           </div>
         </div>
