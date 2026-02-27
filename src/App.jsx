@@ -35,7 +35,7 @@ function App() {
       <Stories />
       <FAQ />
       <CTA />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

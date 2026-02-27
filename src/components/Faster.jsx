@@ -87,7 +87,7 @@ export default function FasterTransactions() {
        {/* PHONE CENTER — replace src with your actual asset path */}
 <div className="relative z-20 flex items-end justify-center" style={{ height: "620px" }}>
   <img
-    src="src/assets/Graphite.png"
+    src="public/assets/Graphite.png"
     alt="Bridge Phone"
     className="h-full w-auto object-contain drop-shadow-2xl"
     style={{ maxHeight: "620px" }}

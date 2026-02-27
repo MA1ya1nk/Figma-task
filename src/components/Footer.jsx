@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Logo Section - Matching the stylized large 'P' */}
           <div className="flex-shrink-0">
              <img 
-               src="src/assets/main.png" 
+               src="public/assets/main.png" 
                alt="Plena Logo" 
                className="w-24 h-auto md:w-28" 
              />

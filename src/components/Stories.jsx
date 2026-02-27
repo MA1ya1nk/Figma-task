@@ -9,17 +9,17 @@ export default function StoriesSection() {
     { 
       title: "Celsius will compensate consumers with a new token", 
       desc: "Celsius, a defunct crypto lending company, will likely release a new token aimed at reimbursing creditors...", 
-      img: "src/assets/story/first.png" // Replace with actual images from Figma
+      img: "public/assets/story/first.png" // Replace with actual images from Figma
     },
     { 
       title: "Celsius will compensate consumers with a new token", 
       desc: "Celsius, a defunct crypto lending company, will likely release a new token aimed at reimbursing creditors...", 
-      img: "src/assets/story/second.png" 
+      img: "public/assets/story/second.png" 
     },
     { 
       title: "Celsius will compensate consumers with a new token", 
       desc: "Celsius, a defunct crypto lending company, will likely release a new token aimed at reimbursing creditors...", 
-      img: "src/assets/story/third.png" 
+      img: "public/assets/story/third.png" 
     },
   ];
 
