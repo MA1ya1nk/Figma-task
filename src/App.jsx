@@ -14,7 +14,7 @@ import Team from './components/Team'
 import Stories from './components/Stories'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -24,8 +24,9 @@ function App() {
       <Hero />
       <BetterThanBanks />
       <Feature />
-      <Faster />
       <Invest />
+      <Faster />
+      
       <Chat />
       <DeFi />
       <Security />
@@ -34,7 +35,7 @@ function App() {
       <Stories />
       <FAQ />
       <CTA />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
