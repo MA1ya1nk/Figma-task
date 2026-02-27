@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function FAQSection() {
-  const [open, setOpen] = useState(0); // Default first one open to match professional landing pages
+  const [open, setOpen] = useState(0);
 
   const faqs = [
     { 
@@ -22,10 +22,16 @@ export default function FAQSection() {
     <section className="py-32 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Large Heading with Lifebuoy Emoji */}
+        {/* Large Heading with Image replacement */}
         <div className="mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            Have more questions? <span className="inline-block align-middle">🛟</span>
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight flex items-center gap-4 flex-wrap">
+              Have more questions? 
+              {/* <img 
+                src="/assets/lifebuoy.png" 
+                alt="Support icon" 
+                className="w-12 h-12 md:w-20 md:h-20 object-contain"
+                
+              /> */}
             </h2>
             <p className="text-white/60 text-xl md:text-3xl">
             Read our <span className="text-white/80 underline decoration-white/20 underline-offset-8 cursor-pointer hover:text-white transition-colors">support document</span> to find out more
@@ -44,13 +50,11 @@ export default function FAQSection() {
                 : "bg-[#0F0F11] border-white/5 hover:border-white/10"
               }`}
             >
-              {/* Question Row - Significantly larger padding and text */}
               <div className="flex justify-between items-center p-10 md:p-12">
                 <h4 className="text-white font-bold text-2xl md:text-4xl pr-8">
                   {faq.q}
                 </h4>
                 
-                {/* Custom Thick Arrow SVG to match your Chevron style */}
                 <div className={`transition-transform duration-500 ease-in-out ${open === i ? "rotate-180" : ""}`}>
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M6 9l6 6 6-6"/>
@@ -58,7 +62,6 @@ export default function FAQSection() {
                 </div>
               </div>
 
-              {/* Animated Answer Box */}
               <div 
                 className={`transition-all duration-500 ease-in-out px-10 md:px-12 ${
                   open === i 
