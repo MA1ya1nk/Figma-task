@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
 
         {/* BOTTOM STATS - Fixed Alignment (Left Aligned, NOT centered) */}
-        <div className="flex flex-row justify-center gap-24 md:gap-40 mt-10">
+        {/* <div className="flex flex-row justify-center gap-24 md:gap-40 mt-10">
           <div className="flex flex-col items-start">
             <h3 className="text-5xl md:text-6xl font-bold mb-3 tracking-tighter">140K+</h3>
             <p className="text-white/40 text-xl md:text-2xl font-medium">Users</p>
@@ -84,7 +84,41 @@ export default function Hero() {
             <h3 className="text-5xl md:text-6xl font-bold mb-3 tracking-tighter">20M+</h3>
             <p className="text-white/40 text-xl md:text-2xl font-medium">Transactions</p>
           </div>
-        </div>
+        </div> */}
+
+        <div className="flex flex-row flex-nowrap justify-center items-center gap-4 md:gap-20 lg:gap-40 mt-10 px-2 w-full overflow-hidden">
+  
+  {/* Statistic 1 */}
+  <div className="flex flex-col items-center flex-1 min-w-0">
+    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
+      140K+
+    </h3>
+    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
+      Users
+    </p>
+  </div>
+
+  {/* Statistic 2 */}
+  <div className="flex flex-col items-center flex-1 min-w-0">
+    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
+      200K+
+    </h3>
+    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
+      Strong Community
+    </p>
+  </div>
+
+  {/* Statistic 3 */}
+  <div className="flex flex-col items-center flex-1 min-w-0">
+    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
+      20M+
+    </h3>
+    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
+      Transactions
+    </p>
+  </div>
+
+</div>
       </div>
     </section>
   );
