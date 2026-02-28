@@ -1,124 +1,107 @@
 import React from "react";
 
 export default function Hero() {
-  const navLinkStyle = {
-    fontFamily: "'Clash Grotesk Display', sans-serif",
-    fontWeight: "400",
-    fontSize: "20px",
-    lineHeight: "110%",
-    letterSpacing: "0px",
-  };
-
   return (
-    <section className="relative w-full bg-black text-white pt-48 pb-24 overflow-hidden">
-      {/* Background Glows */}
+    <section className="relative w-full bg-black text-white pt-36 md:pt-48 pb-12 md:pb-24 overflow-hidden">
+
+      {/* Glow */}
       <div className="absolute top-0 left-[-10%] w-[60%] h-[60%] bg-purple-600/15 blur-[140px] rounded-full pointer-events-none" />
-      
-      <div className="max-w-[85rem] mx-auto px-8 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4">
-          
-          {/* LEFT CONTENT - All text and buttons are now significantly larger */}
-          <div className="flex flex-col items-start z-30">
-            <h1 className="text-[80px] md:text-[110px] font-bold leading-[0.95] tracking-tight mb-10">
+
+      <div className="max-w-[85rem] mx-auto px-6 md:px-12 relative z-10">
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 md:gap-10">
+
+          {/* LEFT TEXT */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+
+            {/* TITLE */}
+            <h1 className="text-[42px] sm:text-[52px] md:text-[72px] lg:text-[110px] font-bold leading-[1] tracking-tight mb-4 md:mb-6">
               Be Your <br />
               Own Bank
             </h1>
 
-            <div className="mb-10 flex flex-col gap-2">
-               <p className="text-white/50 text-2xl md:text-3xl max-w-[650px] leading-[1.2]">
-                Introducing <span className="text-white/80">Plena 2.0</span>, Self-Custodial Smart 
-               </p>
-               <p className="text-white/50 text-2xl md:text-3xl max-w-[600px] leading-[1.2]">
-                Wallet with <span className="text-white/80 border-b border-white/30">EIP-4337: Account Abstraction</span>
-               </p>
+            {/* SUBTEXT */}
+            <div className="mb-6 md:mb-8 space-y-1 max-w-[550px]">
+              <p className="text-white/60 text-base sm:text-lg md:text-xl">
+                Introducing <span className="text-white">Plena 2.0</span>, Self-Custodial Smart
+              </p>
+
+              <p className="text-white/60 text-base sm:text-lg md:text-xl">
+                Wallet with{" "}
+                <span className="text-white border-b border-white/30">
+                  EIP-4337: Account Abstraction
+                </span>
+              </p>
             </div>
 
-            {/* Huge Action Buttons */}
-            <div className="flex items-center gap-10 mb-24">
-              <button className="px-12 py-5 rounded-2xl bg-[#161618] border border-white/10 text-white font-bold text-xl hover:bg-white/5 transition-all">
+            {/* BUTTONS */}
+            <div className="flex items-center gap-6 md:gap-10 mb-6 md:mb-24">
+
+              <button className="px-6 md:px-12 py-3 md:py-5 rounded-xl md:rounded-2xl bg-[#161618] border border-white/10 text-white font-semibold md:text-xl hover:bg-white/5 transition">
                 Get the App
               </button>
 
-              <button className="flex items-center gap-4 text-white/80 hover:text-white group transition-colors">
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white/10 transition-all">
-                  <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-purple-500 border-b-[8px] border-b-transparent ml-1" />
+              <button className="flex items-center gap-3 text-white/80 hover:text-white transition">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center">
+                  <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-purple-500 border-b-[6px] border-b-transparent ml-1" />
                 </div>
-                <span style={navLinkStyle} className="text-2xl font-medium underline underline-offset-8 decoration-white/20">Watch Intro</span>
+
+                <span className="text-sm md:text-xl underline underline-offset-4">
+                  Watch Intro
+                </span>
               </button>
+
             </div>
+
           </div>
 
-          {/* RIGHT IMAGE SECTION - Huge Phones */}
-          <div className="relative flex justify-end items-center h-[700px]">
-            {/* The "P" Logo Glow Background */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 blur-[100px] rounded-full" />
-            
-            {/* Secondary Phone (Back) - Scaled to w-[550px] */}
+
+          {/* PHONE IMAGES */}
+          <div className="relative flex justify-center lg:justify-end items-center h-[220px] sm:h-[260px] md:h-[600px] mt-2 mb-2 md:mt-0">
+
+            {/* Glow */}
+            <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-purple-500/5 blur-[100px] rounded-full" />
+
+            {/* BACK PHONE */}
             <img
               src="/assets/phone/right.png"
-              alt="Plena App Interface"
-              className="absolute w-[450px] md:w-[650px] z-10 translate-x-20 translate-y-10 rotate-[2deg] opacity-90 transition-transform hover:scale-105 duration-700"
+              alt="Plena App"
+              className="absolute w-[250px] sm:w-[260px] md:w-[400px] lg:w-[650px] translate-x-10 md:translate-x-20 -translate-y-5 md:translate-y-10 rotate-[2deg] opacity-90"
             />
-            {/* Primary Phone (Front) - Scaled to w-[550px] */}
+
+            {/* FRONT PHONE */}
             <img
               src="/assets/phone/left.png"
-              alt="Plena App Main"
-              className="absolute w-[450px] md:w-[650px] z-20 -translate-x-24 -rotate-[4deg] drop-shadow-[0_50px_50px_rgba(0,0,0,0.8)] transition-transform hover:scale-105 duration-700"
+              alt="Plena Wallet"
+              className="absolute w-[250px] sm:w-[260px] md:w-[400px] lg:w-[650px] -translate-x-5 md:-translate-x-24 -rotate-[4deg] drop-shadow-[0_40px_40px_rgba(0,0,0,0.8)]"
             />
+
           </div>
+
         </div>
 
-        {/* BOTTOM STATS - Fixed Alignment (Left Aligned, NOT centered) */}
-        {/* <div className="flex flex-row justify-center gap-24 md:gap-40 mt-10">
-          <div className="flex flex-col items-start">
-            <h3 className="text-5xl md:text-6xl font-bold mb-3 tracking-tighter">140K+</h3>
-            <p className="text-white/40 text-xl md:text-2xl font-medium">Users</p>
+
+        {/* STATS */}
+        <div className="flex justify-center gap-6 md:gap-20 mt-6 md:mt-10 text-center">
+
+          <div>
+            <h3 className="text-xl md:text-5xl font-bold">140K+</h3>
+            <p className="text-white/40 text-xs md:text-xl">Users</p>
           </div>
 
-          <div className="flex flex-col items-start">
-            <h3 className="text-5xl md:text-6xl font-bold mb-3 tracking-tighter">200K+</h3>
-            <p className="text-white/40 text-xl md:text-2xl font-medium">Strong Community</p>
+          <div>
+            <h3 className="text-xl md:text-5xl font-bold">200K+</h3>
+            <p className="text-white/40 text-xs md:text-xl">Strong Community</p>
           </div>
 
-          <div className="flex flex-col items-start">
-            <h3 className="text-5xl md:text-6xl font-bold mb-3 tracking-tighter">20M+</h3>
-            <p className="text-white/40 text-xl md:text-2xl font-medium">Transactions</p>
+          <div>
+            <h3 className="text-xl md:text-5xl font-bold">20M+</h3>
+            <p className="text-white/40 text-xs md:text-xl">Transactions</p>
           </div>
-        </div> */}
 
-        <div className="flex flex-row flex-nowrap justify-center items-center gap-4 md:gap-20 lg:gap-40 mt-10 px-2 w-full overflow-hidden">
-  
-  {/* Statistic 1 */}
-  <div className="flex flex-col items-center flex-1 min-w-0">
-    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
-      140K+
-    </h3>
-    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
-      Users
-    </p>
-  </div>
+        </div>
 
-  {/* Statistic 2 */}
-  <div className="flex flex-col items-center flex-1 min-w-0">
-    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
-      200K+
-    </h3>
-    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
-      Strong Community
-    </p>
-  </div>
-
-  {/* Statistic 3 */}
-  <div className="flex flex-col items-center flex-1 min-w-0">
-    <h3 className="text-[clamp(1.5rem,5vw,3.75rem)] font-bold leading-none tracking-tighter whitespace-nowrap">
-      20M+
-    </h3>
-    <p className="text-white/40 text-[clamp(0.75rem,2vw,1.5rem)] font-medium whitespace-nowrap">
-      Transactions
-    </p>
-  </div>
-
-</div>
       </div>
     </section>
   );
