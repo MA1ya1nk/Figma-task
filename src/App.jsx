@@ -15,6 +15,7 @@ import Stories from './components/Stories'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import News from './components/News'
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
       <Team />
       <Stories />
       <FAQ />
+      {/* <News /> */}
       <CTA />
       <Footer />
     </div>

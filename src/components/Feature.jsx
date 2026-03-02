@@ -1,199 +1,9 @@
-// export default function FeaturesSection() {
-//   return (
-//     <>
-//       <style>
-//         {`
-//         @import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Inter:wght@400;500&display=swap');
-
-//         .features-section {
-//           background: #111113;
-//           width: 100%;
-//           padding: 100px 48px;
-//           box-sizing: border-box;
-//           font-family: 'Inter', sans-serif;
-//         }
-
-//         .features-inner {
-//           max-width: 1200px;
-//           margin: 0 auto;
-//           display: flex;
-//           flex-direction: column;
-//         }
-
-//         .feature-row {
-//           display: grid;
-//           grid-template-columns: 1fr 1fr;
-//           align-items: center;
-//           padding: 90px 0;
-//           border-bottom: 1px solid rgba(255,255,255,0.07);
-//           gap: 60px;
-//         }
-
-//         .feature-row:last-child {
-//           border-bottom: none;
-//         }
-
-//         .feature-row.reverse {
-//           direction: rtl;
-//         }
-
-//         .feature-row.reverse > * {
-//           direction: ltr;
-//         }
-
-//         .feature-title {
-//           font-family: 'Clash Display', serif;
-//           font-weight: 600;
-//           font-size: clamp(42px, 5vw, 64px);
-//           line-height: 1.15;
-//           letter-spacing: -0.5px;
-//           color: #ffffff;
-//           margin: 0 0 20px 0;
-//           max-width: 575px;
-//         }
-
-//         .feature-desc {
-//           font-size: clamp(16px, 1.2vw, 20px);
-//           line-height: 1.7;
-//           color: rgba(255,255,255,0.55);
-//           margin: 0 0 32px 0;
-//           max-width: 596px;
-//         }
-
-//         .feature-cta {
-//           display: inline-block;
-//           padding: 12px 26px;
-//           border: 1px solid rgba(255,255,255,0.25);
-//           border-radius: 8px;
-//           color: rgba(255,255,255,0.9);
-//           font-size: 15px;
-//           font-weight: 500;
-//           cursor: pointer;
-//           background: transparent;
-//           transition: all 0.2s;
-//           text-decoration: none;
-//         }
-
-//         .feature-cta:hover {
-//           border-color: rgba(255,255,255,0.6);
-//           color: white;
-//         }
-
-//         .feature-image {
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//         }
-
-//         .feature-image img {
-//           width: 390px;
-//           height: 390px;
-//           max-width: 100%;
-//           object-fit: contain;
-//         }
-
-//         @media (max-width: 900px) {
-//           .features-section {
-//             padding: 80px 24px;
-//           }
-
-//           .feature-row {
-//             grid-template-columns: 1fr;
-//             padding: 70px 0;
-//             gap: 40px;
-//           }
-
-//           .feature-row.reverse {
-//             direction: ltr;
-//           }
-
-//           .feature-image img {
-//             width: 100%;
-//             max-width: 340px;
-//             height: auto;
-//           }
-
-//           .feature-title {
-//             font-size: clamp(34px, 6vw, 48px);
-//           }
-
-//           .feature-desc {
-//             font-size: 16px;
-//           }
-//         }
-//         `}
-//       </style>
-
-//       <section className="features-section">
-//         <div className="features-inner">
-
-//           {/* Feature 1 */}
-//           <div className="feature-row">
-//             <div>
-//               <h2 className="feature-title">
-//                 Take control of <br /> your assets
-//               </h2>
-
-//               <p className="feature-desc">
-//                 Unlike centralized exchanges, Plena ensures that only users have full control over their crypto assets.
-//               </p>
-//             </div>
-
-//             <div className="feature-image">
-//               <img src="/assets/feature/security-shield.png" alt="control assets" />
-//             </div>
-//           </div>
-
-//           {/* Feature 2 */}
-//           <div className="feature-row reverse">
-//             <div>
-//               <h2 className="feature-title">
-//                 Social Login & <br /> Easy recovery
-//               </h2>
-
-//               <p className="feature-desc">
-//                 Sign in quickly and effortlessly using social media accounts, and retrieve your account even if your device is lost with MPC security.
-//               </p>
-//             </div>
-
-//             <div className="feature-image">
-//               <img src="/assets/feature/social.png" alt="social login" />
-//             </div>
-//           </div>
-
-//           {/* Feature 3 */}
-//           <div className="feature-row">
-//             <div>
-//               <h2 className="feature-title">100K+ Tokens</h2>
-
-//               <p className="feature-desc">
-//                 Store, Send, Receive and Trade over 100,000 crypto across Multiple Chains at Best Rates.
-//               </p>
-
-//               <a className="feature-cta">Get the App</a>
-//             </div>
-
-//             <div className="feature-image">
-//               <img src="/assets/feature/crypto-coins.png" alt="tokens" />
-//             </div>
-//           </div>
-
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
-
-
-
-
 export default function FeaturesSection() {
   return (
     <>
       <style>
         {`
-        @import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Inter:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
         .features-section {
           background: #111113;
@@ -231,20 +41,26 @@ export default function FeaturesSection() {
           direction: ltr;
         }
 
+        /* Update Heading Style for 42px spec */
         .feature-title {
-          font-family: 'Clash Display', serif;
+          font-family: 'Clash Grotesk Display', sans-serif;
           font-weight: 600;
-          font-size: clamp(42px, 5vw, 64px);
-          line-height: 1.15;
-          letter-spacing: -0.5px;
+          font-size: 42px; 
+          line-height: 1.2; 
+          letter-spacing: 0px;
+          vertical-align: bottom;
           color: #ffffff;
           margin: 0 0 20px 0;
           max-width: 575px;
         }
 
+        /* Update Description Style for 28px spec */
         .feature-desc {
-          font-size: clamp(16px, 1.2vw, 20px);
-          line-height: 1.7;
+          font-family: 'Clash Grotesk Display', sans-serif;
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 1.4;
+          letter-spacing: 0px;
           color: rgba(255,255,255,0.55);
           margin: 0 0 32px 0;
           max-width: 596px;
@@ -282,7 +98,6 @@ export default function FeaturesSection() {
           object-fit: contain;
         }
 
-        /* MOBILE FIXES - INCREASED SIZES */
         @media (max-width: 900px) {
           .features-section {
             padding: 60px 24px;
@@ -290,8 +105,8 @@ export default function FeaturesSection() {
 
           .feature-row {
             display: flex;
-            flex-direction: column-reverse; /* Image above text */
-            align-items: flex-start; /* Perfect left alignment */
+            flex-direction: column-reverse;
+            align-items: flex-start;
             padding: 50px 0;
             gap: 24px;
           }
@@ -307,29 +122,22 @@ export default function FeaturesSection() {
           }
 
           .feature-image img {
-            width: 180px; /* Increased from 50px for better visibility */
+            width: 180px;
             height: auto;
             margin-bottom: 12px;
           }
 
           .feature-title {
-            font-size: 38px; /* Increased for impact */
+            font-size: 32px; 
             text-align: left;
             max-width: 100%;
-            line-height: 1.2;
           }
 
           .feature-desc {
-            font-size: 18px; /* Increased for readability */
+            font-size: 18px;
             text-align: left;
             max-width: 100%;
-            margin-bottom: 24px;
-            color: rgba(255,255,255,0.7); /* Slightly brighter for mobile clarity */
-          }
-          
-          .feature-cta {
-            width: 100%; /* Makes button full width on mobile if desired, or remove this line */
-            text-align: center;
+            color: rgba(255,255,255,0.7);
           }
         }
         `}
@@ -353,32 +161,32 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Feature 2 */}
+          {/* Feature 2: Swap Crypto Example */}
           <div className="feature-row reverse">
             <div>
               <h2 className="feature-title">
-                Social Login & <br /> Easy recovery
+                Swap Crypto <br /> with ease
               </h2>
               <p className="feature-desc">
-                Sign in quickly and effortlessly using social media accounts, and retrieve your account even if your device is lost with MPC security.
+                Swap smarter, not harder with Plena Finance - fast, safe, and competitive crypto swaps.
               </p>
             </div>
             <div className="feature-image">
-              <img src="/assets/feature/social.png" alt="social login" />
+              <img src="/assets/feature/social.png" alt="swap crypto" />
             </div>
           </div>
 
-          {/* Feature 3 */}
+          {/* Feature 3: Lending Example */}
           <div className="feature-row">
             <div>
-              <h2 className="feature-title">100K+ Tokens</h2>
+              <h2 className="feature-title">Lending Protocol</h2>
               <p className="feature-desc">
-                Store, Send, Receive and Trade over 100,000 crypto across Multiple Chains at Best Rates.
+                Earn Interest with Top Protocols in the Industry with Just a Tap!
               </p>
               <a className="feature-cta">Get the App</a>
             </div>
             <div className="feature-image">
-              <img src="/assets/feature/crypto-coins.png" alt="tokens" />
+              <img src="/assets/feature/crypto-coins.png" alt="lending" />
             </div>
           </div>
 
