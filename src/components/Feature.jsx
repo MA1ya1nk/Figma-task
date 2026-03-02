@@ -45,7 +45,7 @@ export default function FeaturesSection() {
         .feature-title {
           font-family: 'Clash Grotesk Display', sans-serif;
           font-weight: 600;
-          font-size: 42px; 
+          font-size: 76px; 
           line-height: 1.2; 
           letter-spacing: 0px;
           vertical-align: bottom;
@@ -165,7 +165,7 @@ export default function FeaturesSection() {
           <div className="feature-row reverse">
             <div>
               <h2 className="feature-title">
-                Swap Crypto <br /> with ease
+                Social Login & <br />Easy recovery
               </h2>
               <p className="feature-desc">
                 Swap smarter, not harder with Plena Finance - fast, safe, and competitive crypto swaps.
