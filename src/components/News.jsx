@@ -11,9 +11,7 @@ const logos = [
         <text x="93" y="22" fontFamily="sans-serif" fontWeight="900" fontSize="17" fill="white">in</text>
       </svg>
     ),
-    // Desktop dimensions (for internal SVG logic)
     dWidth: "226.59px", dHeight: "60px",
-    // Exact Mobile dimensions from Figma
     mWidth: "138.986px", mHeight: "36.813px", mOpacity: 1
   },
   {
@@ -46,16 +44,21 @@ const logos = [
       <svg viewBox="0 0 160 32" fill="white" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%" }}>
         <circle cx="16" cy="16" r="16" fill="white" fillOpacity="0.15"/>
         <path d="M24 16.2h-8v3h4.6A4.6 4.6 0 0116 22a6 6 0 110-12 5.8 5.8 0 014.1 1.7l2.1-2.1A9 9 0 107 16a9 9 0 009 9c5 0 8.7-3.5 8.7-8.7 0-.7-.1-1.4-.2-2.1H24v2z" fill="white"/>
-        <text x="38" y="18" fontFamily="sans-serif" fontWeight="700" fontSize="15" fill="white">Google</text>
-        <text x="38" y="29" fontFamily="sans-serif" fontWeight="400" fontSize="8" fill="white" opacity="0.7">for Entrepreneurs</text>
+        <text x="38" y="18" fontFamily="sans-serif" fontWeight="700" fontSize="30" fill="white">Google</text>
+        <text x="38" y="36" fontFamily="sans-serif" fontWeight="400" fontSize="15" fill="white" opacity="0.7">for Entrepreneurs</text>
       </svg>
     ),
-    dWidth: "131.69px", dHeight: "60px",
-    mWidth: "80.802px", mHeight: "36.813px", mOpacity: 0.8
+    // Desktop View Specs Fix
+    dWidth: "131.3715057373047px", 
+    dHeight: "42.86592483520508px", 
+    dOpacity: 1,
+    // Mobile View Specs Fix
+    mWidth: "80.60413360595703px", 
+    mHeight: "26.300762176513672px", 
+    mOpacity: 1
   },
 ];
 
-// Order used for the 6-item mobile grid shown in image
 const mobileOrder = [logos[0], logos[1], logos[3], logos[0], logos[0], logos[1], logos[2], logos[3]];
 
 export default function NewsSection() {
@@ -68,25 +71,39 @@ export default function NewsSection() {
         <h2 className="news-title">Plena in the News</h2>
       </div>
 
-      {/* Desktop View (Untouched Logic) */}
       <div className="desktop-rows">
         <div className="row-style">
           {[...logos, ...logos].map((logo, i) => (
-            <div key={"d1-" + i} className="logo-item" style={{ width: logo.dWidth, height: logo.dHeight }}>
+            <div 
+              key={"d1-" + i} 
+              className="logo-item" 
+              style={{ 
+                width: logo.dWidth, 
+                height: logo.dHeight,
+                opacity: logo.name === "Google" ? (logo.dOpacity || 1) : 0.8 
+              }}
+            >
               {logo.svg}
             </div>
           ))}
         </div>
         <div className="row-style" style={{ marginTop: "40px" }}>
           {[...logos, ...logos].map((logo, i) => (
-            <div key={"d2-" + i} className="logo-item" style={{ width: logo.dWidth, height: logo.dHeight }}>
+            <div 
+              key={"d2-" + i} 
+              className="logo-item" 
+              style={{ 
+                width: logo.dWidth, 
+                height: logo.dHeight,
+                opacity: logo.name === "Google" ? (logo.dOpacity || 1) : 0.8 
+              }}
+            >
               {logo.svg}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Mobile View (Specific Specs Applied) */}
       <div className="mobile-grid">
         <div className="mobile-logo-grid">
           {mobileDisplayList.map((logo, i) => (
@@ -132,7 +149,7 @@ export default function NewsSection() {
         .desktop-rows { display: block; }
         .mobile-grid { display: none; }
         .row-style { display: flex; justify-content: center; gap: 60px; mix-blend-mode: luminosity; }
-        .logo-item { opacity: 0.8; flex-shrink: 0; }
+        .logo-item { flex-shrink: 0; }
 
         @media (max-width: 767px) {
           .desktop-rows { display: none; }

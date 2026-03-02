@@ -22,16 +22,10 @@ export default function FAQSection() {
     <section className="py-32 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Large Heading with Image replacement */}
-        <div className="mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight flex items-center gap-4 flex-wrap">
+        {/* Large Heading with Image replacement - Centered on Mobile */}
+        <div className="mb-16 text-center lg:text-left">
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight flex items-center justify-center lg:justify-start gap-4 flex-wrap">
               Have more questions? 
-              {/* <img 
-                src="/assets/lifebuoy.png" 
-                alt="Support icon" 
-                className="w-12 h-12 md:w-20 md:h-20 object-contain"
-                
-              /> */}
             </h2>
             <p className="text-white/60 text-xl md:text-3xl">
             Read our <span className="text-white/80 underline decoration-white/20 underline-offset-8 cursor-pointer hover:text-white transition-colors">support document</span> to find out more

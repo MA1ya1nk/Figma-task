@@ -43,7 +43,7 @@ export default function InvestSection() {
           flex-wrap: wrap;
         }
 
-        /* --- UPDATED BUTTON DIMENSIONS PER FIGMA --- */
+        /* --- FIXED BUTTON DIMENSIONS PER FIGMA --- */
         .store-btn {
           display: inline-flex;
           align-items: center;
@@ -56,12 +56,13 @@ export default function InvestSection() {
           transition: transform 0.2s ease;
           border: none;
           
-          /* Figma Specs */
+          /* Figma Specs kept constant for all views */
           width: 240px;
           height: 70.0478px;
           opacity: 1;
-          padding: 0 24px; /* Centering content horizontally */
+          padding: 0 24px; 
           box-sizing: border-box;
+          flex-shrink: 0; /* Prevents button from squeezing */
         }
 
         .store-btn:hover {
@@ -89,7 +90,6 @@ export default function InvestSection() {
           line-height: 1.2;
         }
 
-        /* --- DESKTOP IMAGES (Default) --- */
         .desktop-image-container {
           position: relative;
           display: flex;
@@ -111,7 +111,6 @@ export default function InvestSection() {
           filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
         }
 
-        /* --- MOBILE IMAGES --- */
         .mobile-image-container {
           display: none;
           position: relative;
@@ -136,7 +135,6 @@ export default function InvestSection() {
           filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
         }
 
-        /* --- RESPONSIVE LOGIC --- */
         @media (max-width: 900px) {
           .invest-inner {
             grid-template-columns: 1fr;
@@ -159,16 +157,7 @@ export default function InvestSection() {
           .desktop-image-container { display: none; }
           .mobile-image-container { display: flex; justify-content: center; order: 2; }
           
-          /* Keep proportions on tablet/mobile but allow scaling if screen is tiny */
-          .store-btn {
-            width: 200px; 
-            height: 58px;
-            padding: 0 16px;
-          }
-
-          .store-btn-name {
-            font-size: 16px;
-          }
+          /* REMOVED scaling logic here so buttons stay 240x70 */
         }
 
         @media (max-width: 480px) {
