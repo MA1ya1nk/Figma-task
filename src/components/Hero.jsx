@@ -34,7 +34,7 @@ export default function Hero() {
               <img 
                 src="/assets/navbar.png"
                 alt=""
-                className="block lg:hidden w-[120px] h-auto mx-auto mt[-10px] opacity-100"
+                className="block lg:hidden w-[120px] h-auto mx-auto mt[-10px] ml-0 opacity-100"
               />
             </div>
 
@@ -74,12 +74,12 @@ export default function Hero() {
             <img
               src="/assets/phone/right.png"
               alt="Plena App"
-              className="absolute w-[250px] sm:w-[260px] md:w-[400px] lg:w-[650px] translate-x-10 md:translate-x-20 -translate-y-5 md:translate-y-10 rotate-[2deg] opacity-90"
+              className="absolute w-[450px] sm:w-[260px] md:w-[400px] lg:w-[650px] translate-x-10 md:translate-x-20  md:translate-y-10 rotate-[2deg] opacity-90"
             />
             <img
               src="/assets/phone/left.png"
               alt="Plena Wallet"
-              className="absolute w-[250px] sm:w-[260px] md:w-[400px] lg:w-[650px] -translate-x-5 md:-translate-x-24 -rotate-[4deg] drop-shadow-[0_40px_40px_rgba(0,0,0,0.8)]"
+              className="absolute w-[450px] sm:w-[260px] md:w-[400px] lg:w-[650px] -translate-x-10 -translate-y-5 md:-translate-x-24 -rotate-[4deg] drop-shadow-[0_40px_40px_rgba(0,0,0,0.8)]"
             />
           </div>
         </div>
