@@ -13,11 +13,30 @@ export default function Hero() {
           {/* LEFT TEXT */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             
-            {/* MAIN TITLE - Updated with Clash Grotesk Specs */}
-            <h1 className="font-['Clash_Grotesk_Display'] font-semibold text-[42px] sm:text-[64px] lg:text-[117px] leading-[1.1] tracking-normal mb-4 md:mb-6">
-              Be Your <br />
-              Own Bank
-            </h1>
+            {/* MAIN TITLE - Updated with Decorative Image Container */}
+            <div className="relative mb-4 md:mb-6">
+              <h1 className="font-['Clash_Grotesk_Display'] font-semibold text-[42px] sm:text-[64px] lg:text-[117px] leading-[1.1] tracking-normal">
+                Be Your <br />
+                Own Bank
+              </h1>
+              {/* Decorative Squiggle Image */}
+              <img 
+                src="/assets/navbar.png" // Ensure this matches your asset name
+                alt=""
+                style={{
+                  width: '251px',
+                  height: '39.57px',
+                  opacity: 1
+                }}
+                className="absolute left-0 -bottom-2 md:-bottom-4 pointer-events-none select-none hidden lg:block"
+              />
+              {/* Mobile version of squiggle for smaller screens */}
+              <img 
+                src="/assets/navbar.png"
+                alt=""
+                className="block lg:hidden w-[120px] h-auto mx-auto mt[-10px] opacity-100"
+              />
+            </div>
 
             {/* SUBTEXT - Updated with Clash Grotesk Specs */}
             <div className="mb-6 md:mb-8 max-w-[600px] font-['Clash_Grotesk_Display'] font-normal">
