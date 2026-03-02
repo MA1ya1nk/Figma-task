@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 export default function StoriesSection() {
   const scrollRef = useRef(null);
 
-  // Updated content based on Figma screenshot
   const stories = [
     {
       title: "Celsius will compensate consumers with a new token",
@@ -30,17 +29,26 @@ export default function StoriesSection() {
       <div className="max-w-[1300px] mx-auto px-6">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6">
-          <div className="max-w-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 md:mb-16 gap-6">
+          {/* MOBILE ONLY TEXT STYLING: Centered, 32px title, 18px desc, 349px width */}
+          <div className="w-full md:max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">
             <h2 
-              className="font-semibold text-[48px] text-white mb-4 leading-[1.2] tracking-[0px]"
-              style={{ fontFamily: "'Clash Grotesk Display', sans-serif" }}
+              className="font-semibold text-[32px] md:text-[48px] text-white mb-4 leading-[1.2] md:leading-[1.2] tracking-[0px]"
+              style={{ 
+                fontFamily: "'Clash Grotesk Display', sans-serif",
+                width: "100%",
+                maxWidth: "349px" // Applied spec width
+              }}
             >
               Our Stories
             </h2>
             <p 
-              className="text-white/60 text-[28px] leading-[1.4] tracking-[0px]"
-              style={{ fontFamily: "'Clash Grotesk Display', sans-serif" }}
+              className="text-white/60 text-[18px] md:text-[28px] leading-[1.4] md:leading-[1.4] tracking-[0px]"
+              style={{ 
+                fontFamily: "'Clash Grotesk Display', sans-serif",
+                width: "100%",
+                maxWidth: "349px" // Applied spec width
+              }}
             >
               The new culture of money is making headlines. Check out our latest blog posts to find out more.
             </p>
@@ -51,7 +59,7 @@ export default function StoriesSection() {
           </button>
         </div>
 
-        {/* Stories Grid */}
+        {/* Stories Grid - Logic untouched */}
         <div 
           ref={scrollRef}
           className="flex flex-row md:grid md:grid-cols-3 gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar pb-6 md:pb-0"
@@ -62,7 +70,7 @@ export default function StoriesSection() {
               key={index} 
               className="flex-none w-[85%] md:w-full snap-center group cursor-pointer"
             >
-              {/* Image Container */}
+              {/* Image Container - Untouched */}
               <div className="relative aspect-[1.2/1] rounded-[30px] overflow-hidden mb-6 border border-white/5 bg-[#121214]">
                 <img 
                   src={story.img} 
@@ -72,9 +80,8 @@ export default function StoriesSection() {
                 />
               </div>
 
-              {/* Text Content */}
+              {/* Individual Story Text */}
               <div className="text-left">
-                {/* Main Story Title: 26px, Medium (500) */}
                 <h3 
                   className="text-white text-[26px] font-medium leading-[1.2] tracking-[0px] mb-3 group-hover:text-white/80 transition-colors"
                   style={{ fontFamily: "'Clash Grotesk Display', sans-serif" }}
@@ -82,7 +89,6 @@ export default function StoriesSection() {
                   {story.title}
                 </h3>
                 
-                {/* Story Description: 20px, Regular (400) */}
                 <p 
                   className="text-white/40 text-[20px] font-normal leading-[1.2] tracking-[0px]"
                   style={{ fontFamily: "'Clash Grotesk Display', sans-serif" }}

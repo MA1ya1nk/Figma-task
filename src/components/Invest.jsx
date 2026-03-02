@@ -21,7 +21,7 @@ export default function InvestSection() {
         }
 
         .invest-title {
-          font-family: Georgia, serif;
+          font-family: 'Clash Grotesk Display', sans-serif;
           font-weight: 700;
           font-size: clamp(28px, 3.5vw, 48px);
           line-height: 1.2;
@@ -39,41 +39,54 @@ export default function InvestSection() {
 
         .store-buttons {
           display: flex;
-          gap: 12px;
+          gap: 16px;
           flex-wrap: wrap;
         }
 
+        /* --- UPDATED BUTTON DIMENSIONS PER FIGMA --- */
         .store-btn {
-          display: flex;
+          display: inline-flex;
           align-items: center;
-          gap: 10px;
-          background: #000;
-          border-radius: 10px;
-          padding: 10px 20px;
+          gap: 12px;
+          background: #000000;
+          color: #ffffff;
+          border-radius: 14px;
           cursor: pointer;
           text-decoration: none;
+          transition: transform 0.2s ease;
+          border: none;
+          
+          /* Figma Specs */
+          width: 240px;
+          height: 70.0478px;
+          opacity: 1;
+          padding: 0 24px; /* Centering content horizontally */
+          box-sizing: border-box;
         }
 
-        .store-btn-icon {
-          font-size: 22px;
-          color: white;
+        .store-btn:hover {
+          transform: scale(1.02);
         }
 
         .store-btn-text {
+          display: flex;
+          flex-direction: column;
           text-align: left;
         }
 
-        .store-btn-small {
-          display: block;
-          font-size: 10px;
-          color: rgba(255,255,255,0.6);
+        .store-btn-label {
+          font-size: 18px;
+          font-weight: 400;
+          color: rgba(255,255,255,0.75);
+          line-height: 1;
+          margin-bottom: 2px;
         }
 
-        .store-btn-large {
-          display: block;
-          font-size: 14px;
+        .store-btn-name {
+          font-size: 19px;
+          font-weight: 700;
           color: #ffffff;
-          font-weight: 600;
+          line-height: 1.2;
         }
 
         /* --- DESKTOP IMAGES (Default) --- */
@@ -98,7 +111,7 @@ export default function InvestSection() {
           filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
         }
 
-        /* --- MOBILE IMAGES (Hidden by default) --- */
+        /* --- MOBILE IMAGES --- */
         .mobile-image-container {
           display: none;
           position: relative;
@@ -119,9 +132,7 @@ export default function InvestSection() {
           position: absolute;
           width: 420px;
           left: 15%;
-          
           z-index: 20;
-          
           filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
         }
 
@@ -142,43 +153,33 @@ export default function InvestSection() {
 
           .store-buttons {
             justify-content: center;
-            order: 3; /* Buttons go below images on mobile */
+            order: 3;
           }
 
-          /* Hide Desktop Assets */
-          .desktop-image-container {
-            display: none;
-          }
-
-          /* Show Mobile Assets */
-          .mobile-image-container {
-            display: flex;
-            justify-content: center;
-            order: 2; /* Images sit between text and buttons */
-          }
-
+          .desktop-image-container { display: none; }
+          .mobile-image-container { display: flex; justify-content: center; order: 2; }
+          
+          /* Keep proportions on tablet/mobile but allow scaling if screen is tiny */
           .store-btn {
-            width: 100%;
-            max-width: 240px;
+            width: 200px; 
+            height: 58px;
+            padding: 0 16px;
+          }
+
+          .store-btn-name {
+            font-size: 16px;
           }
         }
 
         @media (max-width: 480px) {
-          .invest-title {
-            font-size: 32px;
-          }
-          .mobile-image-container {
-            height: 300px;
-          }
-          .m-phone-right, .m-phone-left {
-            width: 180px;
-          }
+          .invest-title { font-size: 32px; }
+          .mobile-image-container { height: 300px; }
+          .m-phone-right, .m-phone-left { width: 180px; }
         }
       `}</style>
 
       <section className="invest-section">
         <div className="invest-inner">
-          {/* LEFT SIDE TEXT */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <h2 className="invest-title">
               Invest in Crypto,<br />
@@ -189,32 +190,30 @@ export default function InvestSection() {
               Buy BTC, ETH, Matic, &amp; 100,000+ crypto Assets across Multiple Chains with Ease
             </p>
 
-            {/* Mobile Image Container - Appears only on Mobile between text and buttons */}
             <div className="mobile-image-container">
               <img src="/assets/phone/right.png" className="m-phone-right h-[300px] w-[400px] object-cover" alt="phone-ui" />
               <img src="/assets/phone/left.png" className="m-phone-left h-[300px] w-[400px] object-cover" alt="phone-ui" />
             </div>
 
             <div className="store-buttons">
-              <a className="store-btn">
-                <span className="store-btn-icon">🍎</span>
-                <span className="store-btn-text">
-                  <span className="store-btn-small">Download on the</span>
-                  <span className="store-btn-large">App Store</span>
-                </span>
+              <a href="#" target="_blank" rel="noreferrer" className="store-btn">
+                <img src="/assets/apple.png" alt="Apple" width="28" height="34" style={{ objectFit: "contain" }} />
+                <div className="store-btn-text">
+                  <span className="store-btn-label">Download on the</span>
+                  <span className="store-btn-name">App Store</span>
+                </div>
               </a>
 
-              <a className="store-btn">
-                <span className="store-btn-icon">▶</span>
-                <span className="store-btn-text">
-                  <span className="store-btn-small">Download on the</span>
-                  <span className="store-btn-large">Play Store</span>
-                </span>
+              <a href="#" target="_blank" rel="noreferrer" className="store-btn">
+                <img src="/assets/playStore.png" alt="Play Store" width="28" height="32" style={{ objectFit: "contain" }} />
+                <div className="store-btn-text">
+                  <span className="store-btn-label">Download on the</span>
+                  <span className="store-btn-name">Play Store</span>
+                </div>
               </a>
             </div>
           </div>
 
-          {/* Desktop Image Container - Hidden on Mobile */}
           <div className="desktop-image-container">
             <img src="/assets/invest/first.png" alt="wallet" className="wallet-img" />
             <img src="/assets/invest/buy.png" alt="buy" className="buy-img" />

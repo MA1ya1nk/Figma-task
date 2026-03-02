@@ -35,7 +35,7 @@ function App() {
       <Team />
       <Stories />
       <FAQ />
-      {/* <News /> */}
+      <News />
       <CTA />
       <Footer />
     </div>
