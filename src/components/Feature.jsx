@@ -41,20 +41,17 @@ export default function FeaturesSection() {
           direction: ltr;
         }
 
-        /* Update Heading Style for 42px spec */
         .feature-title {
           font-family: 'Clash Grotesk Display', sans-serif;
           font-weight: 600;
           font-size: 76px; 
           line-height: 1.2; 
           letter-spacing: 0px;
-          vertical-align: bottom;
           color: #ffffff;
           margin: 0 0 20px 0;
           max-width: 575px;
         }
 
-        /* Update Description Style for 28px spec */
         .feature-desc {
           font-family: 'Clash Grotesk Display', sans-serif;
           font-weight: 400;
@@ -98,6 +95,7 @@ export default function FeaturesSection() {
           object-fit: contain;
         }
 
+        /* MOBILE VIEW UPDATES */
         @media (max-width: 900px) {
           .features-section {
             padding: 60px 24px;
@@ -105,7 +103,7 @@ export default function FeaturesSection() {
 
           .feature-row {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column-reverse; /* Text under image for mobile */
             align-items: flex-start;
             padding: 50px 0;
             gap: 24px;
@@ -121,20 +119,25 @@ export default function FeaturesSection() {
             width: 100%;
           }
 
+          /* Image size updated to 96x96 */
           .feature-image img {
-            width: 180px;
-            height: auto;
+            width: 96px;
+            height: 96px;
             margin-bottom: 12px;
           }
 
+          /* Title: 36px, 120% line-height */
           .feature-title {
-            font-size: 32px; 
+            font-size: 36px; 
+            line-height: 1.2;
             text-align: left;
             max-width: 100%;
           }
 
+          /* Description: 18px, 140% line-height */
           .feature-desc {
             font-size: 18px;
+            line-height: 1.4;
             text-align: left;
             max-width: 100%;
             color: rgba(255,255,255,0.7);
@@ -161,7 +164,7 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Feature 2: Swap Crypto Example */}
+          {/* Feature 2 */}
           <div className="feature-row reverse">
             <div>
               <h2 className="feature-title">
@@ -176,7 +179,7 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Feature 3: Lending Example */}
+          {/* Feature 3 */}
           <div className="feature-row">
             <div>
               <h2 className="feature-title">Lending Protocol</h2>

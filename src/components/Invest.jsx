@@ -102,7 +102,7 @@ export default function InvestSection() {
         .mobile-image-container {
           display: none;
           position: relative;
-          height: 650px;
+          height: 850px;
           width: 100%;
           margin-top: 20px;
         }
@@ -110,11 +110,9 @@ export default function InvestSection() {
         .m-phone-right {
           position: absolute;
           width: 620px;
-          right: 15%;
-          top: 0;
-          z-index: 10;
-          
-          transform: rotate(-5deg);
+          right: 7%;
+          bottom: 20px;
+          z-index: 10;          
         }
 
         .m-phone-left {
@@ -123,7 +121,7 @@ export default function InvestSection() {
           left: 15%;
           
           z-index: 20;
-          transform: rotate(5deg);
+          
           filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
         }
 
@@ -193,8 +191,8 @@ export default function InvestSection() {
 
             {/* Mobile Image Container - Appears only on Mobile between text and buttons */}
             <div className="mobile-image-container">
-              <img src="/assets/phone/right.png" className="m-phone-right h-[300px] w-[200px]" alt="phone-ui" />
-              <img src="/assets/phone/left.png" className="m-phone-left h-[300px] w-[200px]" alt="phone-ui" />
+              <img src="/assets/phone/right.png" className="m-phone-right h-[300px] w-[400px] object-cover" alt="phone-ui" />
+              <img src="/assets/phone/left.png" className="m-phone-left h-[300px] w-[400px] object-cover" alt="phone-ui" />
             </div>
 
             <div className="store-buttons">
